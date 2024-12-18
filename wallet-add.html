@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet">    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+<title>Three Centered Blocks</title>
+</head>
+<body class="bodyd">
+  <div class="block">
+    <h1>Add existing wallet</h1>
+  </div>
+  <div class="block">
+    <button class="button_container" id="myButton" style='margin-bottom:30px'>
+        <img class="button_image" src='export.png'> 
+        <div class="button_text">
+            <span>Secret phrase</span> 
+            <span>Use a 12, 18 or 24-word phrase</span>        
+        </div>
+    </button>
+    <button class="button_container" id="myButton2">
+        <img class="button_image" src='eye.png'> 
+        <div class="button_text">
+            <span>View-only wallet</span> 
+            <span>Observe or track assets of other wallets</span>        
+        </div>
+    </button>
+  </div>
+    <div class="block_info">
+        <span>You can create another wallet at anytime under 'Manage Wallet'</span>
+        <span>* Only multi-coin wallets are eligible for points.</span>
+    </div>
+    <script>
+const myButton = document.getElementById('myButton');
+const myButton2 = document.getElementById('myButton2');
+
+// Обработчик для myButton
+myButton.addEventListener('click', function() {
+ window.location.href = 'secretphrase.html';
+});
+
+// Обработчик для myButton2
+myButton2.addEventListener('click', function() {
+ window.location.href = 'secretphrase.html';
+});
+    </script>
+</body>
+</html>

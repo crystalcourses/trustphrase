@@ -1,0 +1,226 @@
+body {
+font-family: "IBM Plex Sans", sans-serif;
+font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.bodyd {
+font-family: "IBM Plex Sans", sans-serif;
+font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.token_heading {
+display: flex;
+max-width: 600px;
+width: 85%;
+flex-direction: row;
+justify-content: space-between;
+color: #5c5c5c;
+}
+.tokens {
+  margin-bottom: 20px;
+}
+#crypto-table {
+  max-width: 600px;
+  width: 100%;
+font-size: 20px;
+margin-bottom: 20px;
+padding-bottom: 20px;
+}
+#crypto-table th, #crypto-table td:nth-child(3) {
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+#crypto-table th, #crypto-table td:nth-child(2) {
+  text-align: left;
+  font-size: 22px;
+  margin-bottom: 20px;
+  padding-bottom: 20px; 
+}
+#crypto-table th {
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
+padding-bottom: 20px;
+}
+/* Styling for price change */
+#crypto-table td:nth-child(4) {
+  text-align: right;
+  color: green;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+}
+#crypto-table td:nth-child(4).red {
+  text-align: right;
+  color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+/* Styling for coin image */
+#crypto-table td:first-child {
+  width: 30px; /* Adjust width as needed */
+}
+#crypto-table td:first-child img {
+  width: 100%;
+  height: auto;
+}
+#crypto-table td:first-child {
+  display: grid;
+  width: 30px;
+  align-items: center;
+}
+.block {
+  width: 100%;
+display: flex;
+  margin: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  text-align: center;
+  flex-direction: column;
+align-items: center;
+}
+.block_info {
+display: flex;
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: left;
+  flex-direction: column;
+align-items: left;
+line-height: 1.2;
+}
+
+h1 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    width: 600px;
+    color:#000000;
+}
+.block button {
+    display: flex;
+
+}
+span {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+.button_container {
+    height: 100px;
+    width: 600px;
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 10px;
+    background-color: #f4f4f6;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* margin-bottom: 20px; */
+  }
+
+  .button_image {
+    width: 60px;
+    height: 50px;
+    padding-right: 10px;
+  }
+
+  .button_text {
+    display: flex;
+    flex-direction: column; /* Текст в два ряда */
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  .button_text span { /* Для каждого текста отдельного стиля */
+    display: block; /* Разрыв строки */
+  }
+
+  .button_text span:first-child { /* Первый текст */
+    font-size: 16px; /* Размер шрифта */
+    color: #000000; /* Цвет текста */
+  }
+
+  .button_text span:last-child { /* Второй текст */
+    font-size: 14px; /* Размер шрифта */
+    color: #5c5c5c;
+  }
+  .block_info span:first-child {
+    text-align: left;
+    width: 400px;
+    color: #5c5c5c;
+    margin-bottom: 5px;
+  }
+  .block_info span:last-child {
+    text-align: left;
+    width:400px;
+    color: rgb(242, 206, 62);
+  }
+@media screen and (max-width: 768px) {
+  .block {
+    width: 98%;
+    margin: 10px;
+  }
+  .block_info {
+    width: 92%;
+    margin: 10px;
+  }
+  .block_info span:first-child {
+    width: 350px;
+    font-size: 18px;
+  }
+  .block_info span:last-child {
+    width: 350px;
+    font-size: 14px;
+  }
+  h1 {
+    width: auto;
+  }
+  .button_container {
+    width: 95%;
+  }
+  .token_heading {
+    display: flex;
+    max-width: 600px;
+    width: 95%;
+    color: #5c5c5c;
+    }
+    .tokens {
+      margin-bottom: 20px;
+    }
+    
+    table#crypto-table {
+      max-width: 600px;
+      width: 95%;
+      font-size: 20px;
+    }
+}
+@media screen and (max-width: 395px) {
+    .block_info span:first-child {
+        width: auto;
+      }
+      .block_info span:last-child {
+        width: auto;
+      }
+}
