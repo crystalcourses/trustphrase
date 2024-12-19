@@ -12,8 +12,6 @@ font-style: normal;
 }
 
 .bodyd {
-  width: 100%;
-  overflow-x: hidden; /* Запрещает горизонтальную прокрутку */
 font-family: "IBM Plex Sans", sans-serif;
 font-style: normal;
   display: flex;
