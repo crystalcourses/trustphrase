@@ -89,7 +89,6 @@ padding-bottom: 20px;
   align-items: center;
 }
 .block {
-  overflow-x: hidden; /* Запрещает горизонтальную прокрутку */
   width: 100%;
 display: flex;
   margin: 20px;
