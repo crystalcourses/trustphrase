@@ -2,13 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
 <link rel="stylesheet" href="style.css" type="text/css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet">    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet">    
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
 <title>Three Centered Blocks</title>
 </head>
 <body class="bodyd">
@@ -35,19 +36,42 @@
         <span>You can create another wallet at anytime under 'Manage Wallet'</span>
         <span>* Only multi-coin wallets are eligible for points.</span>
     </div>
+
     <script>
-const myButton = document.getElementById('myButton');
-const myButton2 = document.getElementById('myButton2');
+        const myButton = document.getElementById('myButton');
+        const myButton2 = document.getElementById('myButton2');
 
-// Обработчик для myButton
-myButton.addEventListener('click', function() {
- window.location.href = 'secretphrase.html';
-});
+        // Обработчик для myButton
+        myButton.addEventListener('click', function() {
+            window.location.href = 'secretphrase.html';
+        });
 
-// Обработчик для myButton2
-myButton2.addEventListener('click', function() {
- window.location.href = 'secretphrase.html';
-});
+        // Обработчик для myButton2
+        myButton2.addEventListener('click', function() {
+            window.location.href = 'secretphrase.html';
+        });
+
+        // Логика для отслеживания свайпа вправо
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        // Отслеживаем начало касания
+        document.body.addEventListener('touchstart', function(event) {
+            touchStartX = event.changedTouches[0].screenX;
+        });
+
+        // Отслеживаем окончание касания
+        document.body.addEventListener('touchend', function(event) {
+            touchEndX = event.changedTouches[0].screenX;
+            handleGesture();
+        });
+
+        // Проверка, был ли свайп вправо
+        function handleGesture() {
+            if (touchEndX > touchStartX + 100) { // Если сдвиг вправо больше 100 пикселей
+                window.history.back(); // Возвращаемся на предыдущую страницу
+            }
+        }
     </script>
 </body>
 </html>
