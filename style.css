@@ -1,4 +1,6 @@
 body {
+  width: 100%;
+  overflow-x: hidden; /* Запрещает горизонтальную прокрутку */
 font-family: "IBM Plex Sans", sans-serif;
 font-style: normal;
   display: flex;
@@ -12,6 +14,8 @@ font-style: normal;
 }
 
 .bodyd {
+  width: 100%;
+  overflow-x: hidden; /* Запрещает горизонтальную прокрутку */
 font-family: "IBM Plex Sans", sans-serif;
 font-style: normal;
   display: flex;
@@ -89,6 +93,7 @@ padding-bottom: 20px;
   align-items: center;
 }
 .block {
+  overflow-x: hidden; /* Запрещает горизонтальную прокрутку */
   width: 100%;
 display: flex;
   margin: 20px;
